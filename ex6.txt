@@ -1,0 +1,49 @@
+#include <stdio.h>
+#include <math.h>
+int moedas50 (int troco);
+int moedas20 (int troco);
+int moedas10 (int troco);
+int moedas5 (int troco);
+int moedas2 (int troco);
+int moedas1 (int troco);
+int main(){
+    int troco;
+    scanf("%d",&troco);
+    printf("%d\n",moedas50(troco));
+    printf("%d\n",moedas20(troco));
+    printf("%d\n",moedas10(troco));
+    printf("%d\n",moedas5(troco));
+    printf("%d\n",moedas2(troco));
+    printf("%d\n",moedas1(troco));
+    return 0;
+}
+int moedas50 (int troco){
+    int troco50;
+    troco50=troco/50;
+    return troco50;
+}
+int moedas20 (int troco){
+    int troco20;
+    troco20=troco%50/20;
+    return troco20;
+}
+int moedas10 (int troco){
+    int troco10;
+    troco10=troco%50%20/10;
+    return troco10;
+}
+int moedas5 (int troco){
+    int troco5;
+    troco5=troco%50%20%10/5;
+    return troco5;
+}
+int moedas2 (int troco){
+    int troco2;
+    troco2=troco%50%20%10%5/2;
+    return troco2;
+}
+int moedas1 (int troco){
+    int troco1;
+    troco1=troco%50%20%10%5%2;
+    return troco1;
+}

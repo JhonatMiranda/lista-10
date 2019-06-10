@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int media(int nota1,int nota2,int nota3,int nota4,int nota5);
+int main(){
+    int i;
+    for(i=1;i<10;i++){
+        int n1,n2,n3,n4,n5;
+        scanf("%d %d %d %d %d",&n1,&n2,&n3,&n4,n5);
+        media(n1,n2,n3,n4,n5);
+        }
+    return 0;
+}
+int media (int nota1,int nota2,int nota3,int  nota4,int nota5){
+    double mediaa;
+    mediaa=(nota1+nota2+nota3+nota4+nota5)/5;
+    printf("%d",mediaa);
+    if (mediaa>=60){
+        printf("Aprovado");
+    }
+    else{
+        printf("Reprovado");
+    }
+    return 0;
+}

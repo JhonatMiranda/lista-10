@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+
+int PouI (int num);
+int main(){
+    int num;
+    scanf("%d",&num);
+    if (PouI(num)==0){
+        printf("Par");
+    }
+    else{
+        printf("Impar");
+    }
+    return 0;
+}
+int PouI (int num){
+    if (num%2==0){
+        return 0;
+    }
+    else{
+        return 1;
+    }
+}

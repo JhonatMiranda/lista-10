@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <math.h>
+
+double convertepes (double metros);
+double convertepolegadas (double metros);
+int main(){
+    double metros;
+    scanf("%lf",&metros);
+    printf("%lf\n",convertepes(metros));
+    printf("%lf\n",convertepolegadas(metros));
+    return 0;
+}
+double convertepes(double metros){
+    double pes;
+    pes=(metros*39.37)*12;
+    return pes;
+}
+double convertepolegadas(double metros){
+    double polegadas;
+    polegadas=metros*39.37;
+    return polegadas;
+}

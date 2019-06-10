@@ -1,0 +1,49 @@
+#include <stdio.h>
+
+double FfC (double temp);
+double FfK (double temp);
+double CfF (double temp);
+double CfK (double temp);
+double KfF (double temp);
+double KfC (double temp);
+int main(){
+    double temp;
+    scanf("%lf",&temp);
+    printf("%lf\n",FfC(temp));
+    printf("%lf\n",FfK(temp));
+    printf("%lf\n",CfF(temp));
+    printf("%lf\n",CfK(temp));
+    printf("%lf\n",KfF(temp));
+    printf("%lf\n",KfC(temp));
+    return 0;
+}
+double FfC (double temp){
+    double c;
+    c=(temp-32)/1.8;
+    return c;
+}
+double FfK (double temp){
+    double k;
+    k=(((temp-32)/9)*5)+273;
+    return k;
+}
+double CfF (double temp){
+    double f;
+    f=(1.8*temp)+32;
+    return f;
+}
+double CfK (double temp){
+    double k;
+    k=temp+273;
+    return k;
+}
+double KfF (double temp){
+    double f;
+    f=(((temp-273)/5)*9)+32;
+    return f;
+}
+double KfC (double temp){
+    double c;
+    c=temp-273;
+    return c;
+}

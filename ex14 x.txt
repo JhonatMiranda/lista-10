@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <math.h>
+
+int operacoes (int num1, int num2, char x);
+int main(){
+    int num1,num2;
+    char op;
+    scanf("%d %d",&num1,&num2);
+    scanf("%c",op);
+    printf("%d",operacoes(num1,num2,op));
+    return 0;
+}
+int operacoes(int num1,int num2, char x){
+    if (x=='/'){
+        return num1/num2;
+    }
+    if (x=='*'){
+        return num1*num2;
+    }
+    if (x=='+'){
+        return num1+num2;
+    }
+    if (x=='-'){
+        return num1-num2;
+    }
+}

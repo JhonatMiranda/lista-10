@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+double delta (double a,double b, double c);
+double raiz1 (double a,double b, double x);
+double raiz2 (double a, double b, double x);
+int main(){
+    double a,b,c,x;
+    scanf("%lf %lf %lf",&a,&b,&c);
+    x=delta(a,b,c);
+    printf("%lf\n",x);
+    printf("%lf\n",raiz1(a,b,x));
+    printf("%lf",raiz2(a,b,x));
+    return 0;
+}
+double delta (double a,double b,double c){
+    double delta1;
+    delta1=(b*b)-(4*a*c);
+    return delta1;
+}
+double raiz1 (double a,double b,double x){
+    double x1;
+    x1=((-b)+(pow(x,1/2)))/(2*a);
+    return x1;
+}
+double raiz2 (double a,double b, double x){
+    double x2;
+    x2=((-b)-(pow(x,1/2)))/(2*a);
+    return x2;
+}
